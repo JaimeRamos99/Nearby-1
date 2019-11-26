@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import FormAndImage from './components/formAndImage'
+import InstructionsAndFood from './components/InstructionsAndFood'
+import Benefits from './components/benefits'
+import Navbar from './components/navbar'
+export default function ButtonAppBar() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment >
+      <Navbar></Navbar>
+      <FormAndImage></FormAndImage>
+      <Benefits></Benefits>
+      <InstructionsAndFood></InstructionsAndFood>
+    </React.Fragment>
   );
 }
-
-export default App;
