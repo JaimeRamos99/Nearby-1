@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form'
 import Button from '@material-ui/core/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Boton from 'react-bootstrap/Button'
+import Spinner from 'react-bootstrap/Spinner'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Container from 'react-bootstrap/Container'
 import Toast from 'react-bootstrap/Toast'
 import api from '../connectionApi'
@@ -12,30 +15,31 @@ export default class FormAndImage extends Component {
     state = {
         toast: false,
         mensaje: "",
-        titulo: ""
+        titulo: "",
+        loading: false
     }
     registro = async () => {
+        this.setState({ loading: true })
         let nombre = document.getElementById('nombre').value, correo = document.getElementById('email').value, user = document.getElementById('username').value, pass = document.getElementById('pass').value, pass2 = document.getElementById('pass2').value
-
         if (pass !== pass2) {
-            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden." })
+            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden.", loading: false })
         } else {
             if (nombre.length === 0 || correo.length === 0 || user.length === 0) {
-                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos." })
+                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos.", loading: false })
             } else {
                 if (pass.length < 6) {
-                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres." })
+                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres.", loading: false })
                 } else {
                     let c = await api.register(nombre, correo, user, pass)
                     console.log(c)
                     if (c === "Done!") {
-                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo." })
+                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo.", loading: false })
                     } else {
                         if (c.code === "auth/invalid-email") {
-                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido." })
+                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido.", loading: false })
                         } else {
                             if (c.code === "auth/email-already-in-use")
-                                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado ya está registrado en la plataforma." })
+                                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado ya está registrado en la plataforma.", loading: false })
                         }
                     }
                 }
@@ -107,9 +111,19 @@ export default class FormAndImage extends Component {
 
                                     <Form.Group as={Row}>
                                         <Col sm={{ span: 10, offset: 3 }}>
-                                            <Button variant="contained" color="primary" onClick={this.registro}>
-                                                Suscribirme
-                                             </Button>
+                                            {(this.state.loading) ?
+                                                <ButtonToolbar> <Boton variant="primary" disabled>
+                                                    <Spinner
+                                                        as="span"
+                                                        animation="grow"
+                                                        size="sm"
+                                                        role="status"
+                                                        aria-hidden="true"
+                                                    />
+                                                    Cargando...
+                                                    </Boton></ButtonToolbar> : <Button variant="contained" color="primary" onClick={this.registro}>
+                                                    Suscribirme
+                                             </Button>}
                                         </Col>
                                     </Form.Group>
 
