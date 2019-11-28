@@ -1,4 +1,4 @@
-const Base_api = 'http://192.168.1.64:3001/'
+const Base_api = 'https://nearbymi.herokuapp.com/'
 class Api {
     async register(nombre, correo, usuario, password) {
         try {

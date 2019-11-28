@@ -1,7 +1,7 @@
 import React from 'react';
-import realTime from '../assets/realtime.png'
 import FastfoodIcon from '@material-ui/icons/Fastfood'
 import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty'
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline'
 export default function Benefits() {
     return (
         <div style={{ paddingBottom: 200, paddingTop: 50, justifyContent: 'space-between', display: 'flex', width: '100vw', backgroundColor: '#FFF7F2' }}>
@@ -23,10 +23,11 @@ export default function Benefits() {
                 </div>
             </div>
             <div>
-                <div style={{ paddingLeft: 80 }}> <img src={realTime} style={{ height: 90, width: 90 }} alt="" /></div>
-                <h5 style={{ paddingRight: 70, paddingTop: 20, paddingBottom: 30 }}>Disponibilidad en tiempo real</h5>
+                <div style={{ paddingLeft: 70 }}><DoneOutlineIcon  style={{ fontSize: 90 }} />
+                    <h5 style={{ paddingTop: 20, paddingBottom: 30 }}>Ahorra tiempo</h5>
+                </div>
                 <div style={{ width: 300 }}>
-                    <em >Desde el 15 de Diciembre podrás saber la disponiblidad de mesas en todos los restaurantes de la ciudad.</em>
+                    <em >¡Te devolvemos tu tiempo! ya no tienes que esperar para comer, tú solo elige que quieres comer.</em>
                 </div>
             </div>
 

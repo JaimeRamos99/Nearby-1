@@ -10,7 +10,6 @@ export default function InstructionsAndFood() {
     return (
         <React.Fragment>
 
-
             <div style={{ paddingLeft: 50, paddingBottom: 70 }} >
                 <Container>
                     <Row style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingBottom: 50, paddingTop: 50 }}><h1>Comida para todos los gustos</h1> </Row>

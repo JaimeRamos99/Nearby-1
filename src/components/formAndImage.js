@@ -10,7 +10,7 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Container from 'react-bootstrap/Container'
 import Toast from 'react-bootstrap/Toast'
 import api from '../connectionApi'
-
+import mockup from '../assets/mockup.png'
 export default class FormAndImage extends Component {
     state = {
         toast: false,
@@ -22,29 +22,30 @@ export default class FormAndImage extends Component {
         this.setState({ loading: true })
         let nombre = document.getElementById('nombre').value, correo = document.getElementById('email').value, user = document.getElementById('username').value, pass = document.getElementById('pass').value, pass2 = document.getElementById('pass2').value
         if (pass !== pass2) {
-            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden.", loading: false })
+            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden."})
         } else {
             if (nombre.length === 0 || correo.length === 0 || user.length === 0) {
-                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos.", loading: false })
+                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos."})
             } else {
                 if (pass.length < 6) {
-                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres.", loading: false })
+                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres."})
                 } else {
                     let c = await api.register(nombre, correo, user, pass)
                     console.log(c)
                     if (c === "Done!") {
-                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo.", loading: false })
+                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo."})
                     } else {
                         if (c.code === "auth/invalid-email") {
-                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido.", loading: false })
+                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido."})
                         } else {
                             if (c.code === "auth/email-already-in-use")
-                                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado ya está registrado en la plataforma.", loading: false })
+                                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado ya está registrado en la plataforma." })
                         }
                     }
                 }
             }
         }
+        this.setState({loading: false })
     }
     render() {
         return (
@@ -129,7 +130,9 @@ export default class FormAndImage extends Component {
 
                                 </Form>
                             </Col>
-
+                            <Col style={{ paddingLeft: 70, paddingBottom:30}}>
+                                <img src={mockup} style={{ height: 400, width: 200 }} alt=""></img>
+                            </Col>
                         </Row>
 
                     </Container>

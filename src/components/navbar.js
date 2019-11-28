@@ -5,7 +5,7 @@ import imagenNearby from '../assets/nearby.png'
 import CountDown from './countdown'
 export default function Navbar() {
     return (
-        <AppBar position="static" style={{ backgroundColor: '#F8680B ' }}>
+        <AppBar position="static" style={{ backgroundColor: '#F77A04' }}>
             <Toolbar>
                 <img src={imagenNearby} style={{ height: 50, width: 180 }} alt="" />
                 <div style={{ paddingLeft: 800 }}>
