@@ -11,6 +11,7 @@ import Container from 'react-bootstrap/Container'
 import Toast from 'react-bootstrap/Toast'
 import api from '../connectionApi'
 import mockup from '../assets/mockup.png'
+import imagenNearby from '../assets/logo.png'
 export default class FormAndImage extends Component {
     state = {
         toast: false,
@@ -22,21 +23,21 @@ export default class FormAndImage extends Component {
         this.setState({ loading: true })
         let nombre = document.getElementById('nombre').value, correo = document.getElementById('email').value, user = document.getElementById('username').value, pass = document.getElementById('pass').value, pass2 = document.getElementById('pass2').value
         if (pass !== pass2) {
-            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden."})
+            this.setState({ toast: true, mensaje: "Las contraseñas no coinciden." })
         } else {
             if (nombre.length === 0 || correo.length === 0 || user.length === 0) {
-                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos."})
+                this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos." })
             } else {
                 if (pass.length < 6) {
-                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres."})
+                    this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres." })
                 } else {
                     let c = await api.register(nombre, correo, user, pass)
                     console.log(c)
                     if (c === "Done!") {
-                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo."})
+                        this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo." })
                     } else {
                         if (c.code === "auth/invalid-email") {
-                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido."})
+                            this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido." })
                         } else {
                             if (c.code === "auth/email-already-in-use")
                                 this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado ya está registrado en la plataforma." })
@@ -45,12 +46,48 @@ export default class FormAndImage extends Component {
                 }
             }
         }
-        this.setState({loading: false })
+        this.setState({ loading: false })
     }
     render() {
         return (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', width: '100vw', backgroundImage: 'url(https://k60.kn3.net/taringa/2/5/8/1/1/6/76/_quin/01B.jpg)' }}>
-                <div>
+            <React.Fragment>
+                <div style={{ height: '100vh', width: '100vw', backgroundImage: 'url(https://storage.googleapis.com/primersegmentoholu/HomePRO.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                    <Container>
+                        <Row style={{ paddingTop: 20, fontFamily: 'Roboto', fontWeight: 'bold' }}>
+
+
+                            <div>
+                                <img src={imagenNearby} style={{ height: 60, width: 60, float: 'left' }} alt="" />
+                                <p style={{ float: 'right', paddingLeft: 10, fontSize: "230%" }}>Nearby</p>
+                            </div>
+
+
+
+                        </Row>
+                        <Row style={{ paddingTop: 30, paddingLeft: 300,paddingBottom:10 }}>
+                            <div style={{ alignItems: "baseline", display: 'flex', justifyContent: "center" }}>
+                                <h1 style={{ width: 600, textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Pronto podrás conocer la disponibilidad de los mejores restaurantes cerca de ti.</h1>
+                            </div>
+
+                        </Row>
+                        <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button variant="contained" color="primary">
+                                Regístrate
+                            </Button>
+                        </Row>
+                    </Container>
+                    <div>
+                    </div>
+
+                     
+                </div>
+            </React.Fragment>
+
+        )
+    }
+}
+/*
+<div>
                     <Container>
                         <Row >
                             <Col md={14}>
@@ -137,7 +174,4 @@ export default class FormAndImage extends Component {
 
                     </Container>
                 </div>
-            </div>
-        )
-    }
-}
+*/
