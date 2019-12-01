@@ -84,33 +84,33 @@ class Countdown extends Component {
         const countDown = this.state;
 
         return (
-            <div style={{color:'white'}}  className="Countdown">
+            <div className="Countdown">
                 <span className="Countdown-col">
                     <span className="Countdown-col-element">
-                        <strong>{this.addLeadingZeros(countDown.days)}</strong>
-                        <span>{countDown.days === 1 ? ' Día ' : ' Días '}</span>
+                        <strong style={{fontSize: 30}}>{this.addLeadingZeros(countDown.days)}</strong>
+                        <span style={{ fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 30 }}>{countDown.days === 1 ? ' Día ' : ' Días '}</span>
                     </span>
                 </span>
 
                 <span className="Countdown-col">
                     <span className="Countdown-col-element">
-                        <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-                        <span> Horas </span>
+                        <strong style={{fontSize: 30}}>{this.addLeadingZeros(countDown.hours)}</strong>
+                        <span style={{ fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 30 }}> Horas </span>
                     </span>
                 </span>
 
 
                 <span className="Countdown-col">
                     <span className="Countdown-col-element">
-                        <strong>{this.addLeadingZeros(countDown.min)}</strong>
-                        <span> Minutos </span>
+                        <strong style={{fontSize: 30}}>{this.addLeadingZeros(countDown.min)}</strong>
+                        <span style={{ fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 30 }}> Minutos </span>
                     </span>
                 </span>
 
                 <span className="Countdown-col">
                     <span className="Countdown-col-element">
-                        <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-                        <span> Segundos</span>
+                        <strong style={{fontSize: 30}}>{this.addLeadingZeros(countDown.sec)}</strong>
+                        <span style={{ fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 30 }}> Segundos</span>
                     </span>
                 </span>
             </div>

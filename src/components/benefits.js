@@ -14,9 +14,8 @@ export default function Benefits() {
             <div style={{ paddingLeft: 260 }}>
                 <div style={{ display: 'flex', marginleft: 40, backgroundColor: 'white', height: 250, width: 250, borderRadius: 10, justifyContent: 'center' }}>
                     <div>
-                        <div style={{ paddingLeft: 20 }}>
+                        <div style={{ paddingLeft: 25, paddingTop: 10 }}>
                             <img src={store} style={{ height: 80, width: 100 }} alt=""></img>
-
                         </div>
                         <h6 style={{ width: 150, textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Descubre nuevos restaurantes</h6>
                     </div>
@@ -29,7 +28,7 @@ export default function Benefits() {
                 <div style={{ display: 'flex', backgroundColor: 'white', justifyContent: 'center', height: 250, width: 250, borderRadius: 10, paddingTop: 10 }}>
                     <div style={{}}>
 
-                        <div style={{ paddingLeft: 15, paddingBottom: 10 }}>
+                        <div style={{ paddingLeft: 20, paddingBottom: 10, paddingTop: 10 }}>
                             <img src={clock} style={{ height: 60, width: 60 }} alt=""></img>
                         </div>
                         <h6 style={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>Ahorra tiempo</h6>
@@ -42,7 +41,7 @@ export default function Benefits() {
             <div>
                 <div style={{ display: 'flex', backgroundColor: 'white', height: 250, width: 250, borderRadius: 10, justifyContent: 'center' }}>
                     <div>
-                        <div style={{ paddingLeft: 25, paddingBottom: 10 }}>
+                        <div style={{ paddingLeft: 28, paddingBottom: 10, paddingTop: 10 }}>
                             <img src={star} style={{ height: 60, width: 60 }} alt=""></img>
                         </div>
                         <h6 style={{ paddinTop: 10, fontFamily: 'Roboto', fontWeight: 'bold' }}>Obtén beneficios</h6>
