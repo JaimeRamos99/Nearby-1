@@ -32,7 +32,7 @@ export default class FormAndImage extends Component {
                     if (c === "Done!") {
                         this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo." })
                     } else {
-                        if (c.code !== undefined) {
+                        if (c !== undefined) {
                             if (c.code === "auth/invalid-email") {
                                 this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "El correo proporcionado no es válido." })
                             } else {

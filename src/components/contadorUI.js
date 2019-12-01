@@ -8,7 +8,7 @@ export default function ContadorUI() {
                     <h6 style={{ width: 600, fontFamily: 'Roboto', fontWeight: 'bold', textAlign: 'center' }}>Desde el 15 de diciembre los bogotanos en la zona Centro Internacional podrán disfrutar de Nearby.</h6>
 
                 </div>
-                <CountDown date={new Date("December 15, 2020 03:24:00")}></CountDown>
+                <CountDown date={"December 15, 2020 03:24:00"}></CountDown>
             </div>
 
         </div>

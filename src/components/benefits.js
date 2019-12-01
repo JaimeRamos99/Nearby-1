@@ -1,7 +1,4 @@
 import React from 'react';
-import FastfoodIcon from '@material-ui/icons/Fastfood'
-import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty'
-import DoneOutlineIcon from '@material-ui/icons/DoneOutline'
 import store from '../assets/store.png'
 import star from '../assets/starpro.png'
 import clock from '../assets/clock.png'

@@ -23,9 +23,9 @@ const FooterPage = () => {
                     <MDBRow style={{ paddingBottom: 30 }}>
                         <MDBCol>
                             <h6 style={{}}>¡Síguenos en redes sociales!</h6>
-                            <a href="https://instagram.com/nearbycol?igshid=1fy4xhr4bs41e" target="_blank" style={{ paddingRight: 15 }}><InstagramIcon ></InstagramIcon></a>
-                            <a href="https://www.facebook.com/Nearby-106209810824122/" target="_blank" style={{ paddingRight: 15 }}><FacebookIcon ></FacebookIcon ></a>
-                            <a href="https://twitter.com/nearbycol" target="_blank"><TwitterIcon></TwitterIcon></a>
+                            <a href="https://instagram.com/nearbycol?igshid=1fy4xhr4bs41e" target="_blank" rel="noopener noreferrer" style={{ paddingRight: 15 }}><InstagramIcon ></InstagramIcon></a>
+                            <a href="https://www.facebook.com/Nearby-106209810824122/" target="_blank" rel="noopener noreferrer" style={{ paddingRight: 15 }}><FacebookIcon ></FacebookIcon ></a>
+                            <a href="https://twitter.com/nearbycol" target="_blank" rel="noopener noreferrer"><TwitterIcon></TwitterIcon></a>
                         </MDBCol>
                     </MDBRow>
                     <MDBRow>
