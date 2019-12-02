@@ -18,17 +18,17 @@ export default class FormAndImage extends Component {
     }
     registro = async () => {
         this.setState({ loading: true })
-        let nombre = document.getElementById('nombre').value, correo = document.getElementById('email').value, user = document.getElementById('username').value, pass = document.getElementById('pass').value, pass2 = document.getElementById('pass2').value
+        let nombre = document.getElementById('nombre').value, correo = document.getElementById('email').value, pass = document.getElementById('pass').value, pass2 = document.getElementById('pass2').value
         if (pass !== pass2) {
             this.setState({ toast: true, mensaje: "Las contraseñas no coinciden." })
         } else {
-            if (nombre.length === 0 || correo.length === 0 || user.length === 0) {
+            if (nombre.length === 0 || correo.length === 0) {
                 this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "Debe llenar todo los campos." })
             } else {
                 if (pass.length < 6) {
                     this.setState({ toast: true, titulo: "¡ERROR!", mensaje: "La contraseña debe tener más de seis carácteres." })
                 } else {
-                    let c = await api.register(nombre, correo, user, pass)
+                    let c = await api.register(nombre, correo, pass)
                     if (c === "Done!") {
                         this.setState({ toast: true, titulo: "¡Bienvenido a Nearby!", mensaje: "Registro exitoso, confirma tu cuenta por medio del link que te enviamos a tu correo." })
                     } else {
@@ -73,17 +73,6 @@ export default class FormAndImage extends Component {
                                 <Form.Group as={Row} controlId="formHorizontalEmail">
                                     <Col sm={9}>
                                         <input type="text" className="form-control" id="email" placeholder="Email" required />
-                                    </Col>
-                                </Form.Group>
-
-                                <Form.Group as={Row} controlId="usercontrol">
-                                    <Col sm={9}>
-                                        <div className="input-group">
-                                            <div className="input-group-prepend">
-                                                <span className="input-group-text" id="inputGroupPrepend2">@</span>
-                                            </div>
-                                            <input type="text" className="form-control" id="username" placeholder="Usuario" aria-describedby="inputGroupPrepend2" required />
-                                        </div>
                                     </Col>
                                 </Form.Group>
 

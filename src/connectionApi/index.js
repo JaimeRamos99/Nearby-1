@@ -1,8 +1,8 @@
 const Base_api = 'https://nearbymi.herokuapp.com/'
 class Api {
-    async register(nombre, correo, usuario, password) {
+    async register(nombre, correo, password) {
         try {
-            let query = await fetch(`${Base_api}createUserEmailPassword/${nombre}/${correo}/${usuario}/${password}`, { method: 'POST' })
+            let query = await fetch(`${Base_api}createUserEmailPassword/${nombre}/${correo}/${password}`, { method: 'POST' })
             let queryJson = await query.json()
             return queryJson
         }
