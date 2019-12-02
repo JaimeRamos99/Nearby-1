@@ -11,12 +11,12 @@ export default class Bienvenido extends React.Component {
                     <Container>
                         <Row>
                             <div style={{ display: 'flex', paddingTop: 30, paddingBottom: 20, justifyContent: 'center', width: '100vw', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
-                                <strong style={{color:'#22264b', fontSize:40}}>¡Ya eres parte de Nearby!</strong>
+                                <strong style={{ color: '#22264b', fontSize: 40 }}>¡Ya eres parte de Nearby!</strong>
                             </div>
                         </Row>
                         <Row style={{ display: 'flex', justifyContent: 'center', paddingBottom: 30 }}>
                             <div>
-                                <h3 style={{paddingTop:8,paddingRight:15}}>En:   </h3>
+                                <h3 style={{ paddingTop: 6, paddingRight: 15 }}>En:   </h3>
                             </div>
                             <CountDown date={"December 15, 2020 03:24:00"}></CountDown>
 
