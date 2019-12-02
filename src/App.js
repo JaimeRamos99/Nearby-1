@@ -7,13 +7,11 @@ import FormSolo from './components/formSolo'
 export default function ButtonAppBar() {
   return (
     <React.Fragment >
-      {/*<Navbar></Navbar>*/}
-      <FormAndImage href="#footer"></FormAndImage>
+      <FormAndImage></FormAndImage>
       <Benefits></Benefits>
       <Contador></Contador>
       <FormSolo></FormSolo>
-     {/* <InstructionsAndFood></InstructionsAndFood>*/}
-      <Footer id="footer"></Footer>
+      <Footer ></Footer>
     </React.Fragment>
   );
 }

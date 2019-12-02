@@ -13,13 +13,13 @@ export default class FormAndImage extends Component {
         titulo: "",
         loading: false
     }
-    
+
     render() {
         return (
             <React.Fragment>
-                <div style={{ backgroundColor: '#22264b' }}>
-                    <div style={{ height: '100vh', width: '100vw', backgroundImage: 'url(https://storage.googleapis.com/primersegmentoholu/HomePRO.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
-                        <Container>
+                <div style={{ display: 'flex', width: '100vw', backgroundColor: '#22264b' }} >
+                    <div style={{ display: 'flex', width: '100vw', height: '100vh', backgroundImage: 'url(https://storage.googleapis.com/primersegmentoholu/HomePRO.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
+                        <Container fluid>
                             <Row style={{ fontFamily: 'Roboto', fontWeight: 'bold', float: 'left' }}>
 
                                 <div>
@@ -30,14 +30,16 @@ export default class FormAndImage extends Component {
                                     <p style={{ float: 'right', paddingLeft: 10, fontSize: "150%", paddingTop: 10 }}>Nearby</p>
                                 </div>
                             </Row>
-                            <Row style={{ paddingTop: 100, paddingLeft: 150, paddingBottom: 10 }}>
-                                <div style={{ alignItems: "baseline", display: 'flex', justifyContent: "center" }}>
-                                    <h2 style={{ width: 600, textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Pronto podrás conocer la disponibilidad de los mejores restaurantes cerca de ti.</h2>
-                                </div>
 
+                            <Row style={{ paddingTop: 100, paddingLeft: 150, paddingBottom: 10 }}>
+
+                                <div style={{ alignItems: "baseline", display: 'flex', justifyContent: "center" }}>
+                                    <h2 style={{ width: '55vw', textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Pronto podrás conocer la disponibilidad de los mejores restaurantes cerca de ti.</h2>
+                                </div>
                             </Row>
+
                             <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Button variant="contained" color="primary" onClick={()=>{scroll.scrollToBottom();}}>
+                                <Button variant="contained" color="primary" onClick={() => { scroll.scrollToBottom(); }}>
                                     Regístrate
                             </Button>
                             </Row>
@@ -45,11 +47,10 @@ export default class FormAndImage extends Component {
                         <div>
                         </div>
 
-
                     </div>
                 </div>
 
-            </React.Fragment>
+            </React.Fragment >
 
         )
     }

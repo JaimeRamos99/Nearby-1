@@ -1,10 +1,33 @@
 import React from 'react';
+import CountDown from './countdown'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 export default class Bienvenido extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: '#22264b' }}>
-                <div style={{ display: 'flex', paddingTop: 100, justifyContent: 'center', height: '100vh', width: '100vw', backgroundImage: 'url(https://storage.googleapis.com/primersegmentoholu/HomePRO.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
-                    <h2>¡Ya eres parte de Nearby!</h2>
+                <div style={{ display: 'flex', width: '100vw', height: '100vh', justifyContent: 'center', backgroundImage: 'url(https://storage.googleapis.com/primersegmentoholu/HomePRO.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
+                    <Container>
+                        <Row>
+                            <div style={{ display: 'flex', paddingTop: 30, paddingBottom: 20, justifyContent: 'center', width: '100vw', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
+                                <h2>¡Ya eres parte de Nearby!</h2>
+
+                            </div>
+                        </Row>
+                        <Row style={{ display: 'flex', justifyContent: 'center', paddingBottom: 30 }}>
+                            <div>
+                                <h3 style={{paddingTop:10,paddingRight:15}}>En:   </h3>
+                            </div>
+                            <CountDown date={"December 15, 2020 03:24:00"}></CountDown>
+
+                        </Row>
+                        <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                            <h4>Podrás disfrutar de Nearby en la zona Centro</h4>
+                        </Row>
+                        <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                            <h4>Internacional de Bogotá</h4>
+                        </Row>
+                    </Container>
                 </div>
             </div>
 
