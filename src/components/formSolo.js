@@ -102,7 +102,7 @@ export default class FormAndImage extends Component {
                                                 />
                                                 Cargando...
                                                     </Boton></ButtonToolbar> : <Button variant="contained" color="primary" onClick={this.registro}>
-                                                Suscribirme
+                                                Registrarme
                                              </Button>}
                                     </Col>
                                 </Form.Group>
