@@ -2,6 +2,7 @@ import React from 'react';
 import CountDown from './countdown'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import { fontSize } from '@material-ui/system';
 export default class Bienvenido extends React.Component {
     render() {
         return (
@@ -10,8 +11,7 @@ export default class Bienvenido extends React.Component {
                     <Container>
                         <Row>
                             <div style={{ display: 'flex', paddingTop: 30, paddingBottom: 20, justifyContent: 'center', width: '100vw', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
-                                <h2>¡Ya eres parte de Nearby!</h2>
-
+                                <strong style={{color:'#22264b', fontSize:40}}>¡Ya eres parte de Nearby!</strong>
                             </div>
                         </Row>
                         <Row style={{ display: 'flex', justifyContent: 'center', paddingBottom: 30 }}>
