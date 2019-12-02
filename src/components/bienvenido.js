@@ -16,7 +16,7 @@ export default class Bienvenido extends React.Component {
                         </Row>
                         <Row style={{ display: 'flex', justifyContent: 'center', paddingBottom: 30 }}>
                             <div>
-                                <h3 style={{paddingTop:10,paddingRight:15}}>En:   </h3>
+                                <h3 style={{paddingTop:8,paddingRight:15}}>En:   </h3>
                             </div>
                             <CountDown date={"December 15, 2020 03:24:00"}></CountDown>
 
