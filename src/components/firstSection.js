@@ -34,7 +34,17 @@ export default class FormAndImage extends Component {
                             <Row style={{ paddingTop: 100, paddingLeft: 130, paddingBottom: 10 }}>
 
                                 <div style={{ alignItems: "baseline", display: 'flex', justifyContent: "center" }}>
-                                    <h3 style={{ width: '55vw', textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Pronto podrás conocer la disponibilidad de los mejores restaurantes cerca de ti.</h3>
+                                   <Container>
+                                   <Row>
+                                    <h3 style={{ width: '60vw', textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Pronto podrás conocer la disponibilidad</h3>
+
+                                    </Row>
+                                    <Row>
+                                    <h3 style={{ width: '60vw', textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>de los mejores restaurantes cerca de ti.</h3>
+
+                                    </Row>
+                                   </Container>
+                                    
                                 </div>
                             </Row>
 
