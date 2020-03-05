@@ -15,7 +15,7 @@ const App = () => (
             <Route path="/" exact component={FirstView} />
             <Route path="/bienvenido/" exact component={Bienvenido} />
             <PrivateRoute exact path="/home/">
-                <Denied />
+                <Home/>
             </PrivateRoute>
             <Route path="/login/" exact component={Login} />
             <Route path="/denied/" exact component={Denied} />
