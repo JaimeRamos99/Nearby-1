@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.general {
+    width: 100vw;
+    height: 100vh;
+}
+
+.generalContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.mainRow {
+    height: 100%;
+}
+
+.firstColumn {
+    background: linear-gradient(#7EA3E1, #D1F5FF);
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 6px 2px 17px -3px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 6px 2px 17px -3px rgba(0, 0, 0, 0.47);
+    box-shadow: 6px 2px 17px -3px rgba(0, 0, 0, 0.47);
+    border-radius: 7px;
+}
+
+.divImage {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    height: 12%;
+    padding-left: 27%;
+    padding-right: 27%;
+}
+
+.divImage2 {
+    margin-top: 45vh;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    padding-left: 42%;
+    padding-right: 42%;
+}
+
+.laImagen {
+    width: 100%;
+    height: 100%;
+}
+
+.divTexto1 {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+.textoBlanco {
+    color: white;
+    text-align: center;
+}
+
+.inputUniversidad {
+    margin-bottom: 10px;
+    min-width: 100px;
+}
+
+.containerForm {
+    display: block;
+    justify-content: center;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 20%;
+}
+
+.botonEstilo {
+    background: linear-gradient(#037BFF, #00A1FF);
+    -webkit-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 1);
+}
+
+.containerBoton {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.containerFinal {
+    display: block;
+    justify-content: center;
+    padding-top: 15%;
+}
+
+.unete {
+    display: flex;
+    justify-content: center;
+}
+
+.password1Container {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .divImage {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .divImage2 {
+        padding-left: 35%;
+        padding-right: 35%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .firstColumn {
+        background: linear-gradient(#037BFF, #00A1FF);
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+        width: 0;
+    }
+    .divImage2 {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+    .divTexto1 {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+    .divImage {
+        margin-top: 1%;
+        display: flex;
+        justify-content: center;
+        height: 85%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+    .containerForm {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .divImage {
+        margin-top: 1%;
+        display: flex;
+        justify-content: center;
+        height: 85%;
+        padding-left: 32%;
+        padding-right: 32%;
+    }
+    .containerForm {
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .containerForm {
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+}

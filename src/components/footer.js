@@ -14,7 +14,7 @@ const FooterPage = () => {
                         <MDBCol>
                             <h5 style={{ fontFamily: 'Roboto' }}>Contáctanos</h5>
                             <div >
-                                <p style={{fontFamily: 'Roboto'}}>+57 300 2810932</p>
+                                <p style={{fontFamily: 'Roboto'}}>+57 3004071328</p>
                                
                            </div>
                            <Divider variant="middle"/>
@@ -23,7 +23,7 @@ const FooterPage = () => {
                     <MDBRow style={{ paddingBottom: 30 }}>
                         <MDBCol>
                             <h6 style={{}}>¡Síguenos en redes sociales!</h6>
-                            <a href="https://instagram.com/nearbycol?igshid=1fy4xhr4bs41e" target="_blank" rel="noopener noreferrer" style={{ paddingRight: 15 }}><InstagramIcon ></InstagramIcon></a>
+                            <a href="https://www.instagram.com/holuglobal/" target="_blank" rel="noopener noreferrer" style={{ paddingRight: 15 }}><InstagramIcon ></InstagramIcon></a>
                             <a href="https://www.facebook.com/Nearby-106209810824122/" target="_blank" rel="noopener noreferrer" style={{ paddingRight: 15 }}><FacebookIcon ></FacebookIcon ></a>
                             <a href="https://twitter.com/nearbycol" target="_blank" rel="noopener noreferrer"><TwitterIcon></TwitterIcon></a>
                         </MDBCol>

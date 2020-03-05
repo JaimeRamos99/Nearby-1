@@ -48,7 +48,7 @@ export default class FormAndImage extends Component {
     }
     render() {
         return (
-            <div style={{display: 'flex', width: '100vw', justifyContent: 'center', backgroundColor: '#f5fcfd', paddingTop: 60, paddingBottom: 80 }}>
+            <div style={{display: 'flex', width: '100vw', justifyContent: 'center', backgroundColor: '#D1F5FF', paddingTop: 60, paddingBottom: 80 }}>
                 <Container >
                     <Row style={{ display: 'flex', justifyContent: 'center', paddingBottom: 30 }}>
                         <h2 style={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>¡Regístrate!</h2>
