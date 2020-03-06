@@ -1,68 +1,154 @@
-import React from 'react';
-import store from '../assets/join.png'
-import clock from '../assets/pickup-car.png'
-import star from '../assets/map.png'
+import React from "react";
+import store from "../assets/join.png";
+import car from "../assets/pickup-car.png";
+import map from "../assets/map.png";
 export default function Benefits() {
-    return (
-        <div style={{ paddingBottom: 100, paddingTop: 100, display: 'flex', width: '100vw', backgroundColor: '#D1F5FF' }}>
-            <div style={{ paddingLeft: 240 }}>
-                <div style={{ display: 'flex', marginleft: 40, backgroundColor: 'white', height: 240, width: 290, borderRadius: 10, justifyContent: 'center' }}>
-                    <div>
-                        <div style={{ paddingLeft: 90, paddingTop: 10, paddingBottom:10 }}>
-                            <img src={store} style={{ width: "50%" }} alt=""></img>
-                        </div>
-                        <div style={{ paddingBottom: 10 }}>
-                            <h4 style={{ display: 'flex', justifyContent: 'center', width: 280, textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Join</h4>
-                        </div>
-                        <div style={{ width: 280, paddingLeft: 5 }}>
-                            <p style={{ textAlign: "center", fontFamily: 'Quicksand', color: '#8C8A88', fontSize:14 }}>When you’re approved, we’ll send you a Zipcard in the mail.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div
+      style={{
+        paddingBottom: 100,
+        paddingTop: 100,
 
+        width: "100%",
+        backgroundColor: "#D1F5FF"
+      }}
+    >
+      <div
+        style={{
+          width: "90%",
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "0 auto",
+          flexWrap: "wrap"
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "1em",
+            backgroundColor: "white",
 
-            <div style={{ paddingLeft: 30, paddingRight: 30, paddingTop: 70 }}>
-                <div style={{ display: 'flex', backgroundColor: 'white', justifyContent: 'center', height: 240, width: 290, borderRadius: 10, paddingTop: 10 }}>
-                    <div style={{}}>
+            width: 290,
+            paddingBottom: "1em",
+            borderRadius: 10,
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <img
+            src={store}
+            style={{ width: "35%", margin: "2em 0" }}
+            alt=""
+          ></img>
 
-                        <div style={{ paddingLeft: 90, paddingTop: 10 }}>
-                            <img src={clock} style={{ width:"50%" }} alt=""></img>
-                        </div>
-                        <div style={{ paddingBottom: 10 }}>
-                            <h4 style={{ display: 'flex',paddingLeft:20, justifyContent: 'center', width: 250, textAlign: "center", fontFamily: 'Roboto', fontWeight: 'bold' }}>Drive</h4>
-                        </div>
-                        <div style={{ width: 270, paddingLeft: 5 }}>
-                            <p style={{ textAlign: "center", fontFamily: 'Quicksand', color: '#8C8A88', fontSize:14 }}>Book a round trip car by the hour or day. To unlock, tap your Zipcard to the card reader on the windshield.</p>
+          <h4
+            style={{
+              textAlign: "center",
+              fontFamily: "Roboto",
+              fontWeight: "bold",
+              marginBottom: "0.5em"
+            }}
+          >
+            Join
+          </h4>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <p
+            style={{
+              textAlign: "center",
+              fontFamily: "Quicksand",
+              fontSize: "1em",
+              color: "#8C8A88",
+              width: "80%"
+            }}
+          >
+            When you’re approved, we’ll send you a Zipcard in the mail.
+          </p>
+        </div>
 
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "1em",
+            backgroundColor: "white",
 
+            width: 290,
+            paddingBottom: "1em",
+            borderRadius: 10,
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <img src={car} style={{ width: "35%", margin: "2em 0" }} alt=""></img>
 
-            <div>
-                <div style={{ display: 'flex', backgroundColor: 'white', height: 240, width: 290, borderRadius: 10, justifyContent: 'center' }}>
-                    <div >
-                        <div style={{ paddingLeft: 110, paddingBottom: 20, paddingTop: 10 }}>
-                            <img src={star} style={{ height: 60, width: 60 }} alt=""></img>
-                        </div>
-                        <div style={{ paddingBottom: 10 }}>
-                            <h4 style={{ display: 'flex', justifyContent: 'center', width: 280, paddinTop: 10, fontFamily: 'Roboto', fontWeight: 'bold' }}>Return</h4>
-                        </div>
-                        <div style={{ paddingLeft: 10, width: 270 }}>
-                            <p style={{ textAlign: "center", fontFamily: 'Quicksand', color: '#8C8A88', fontSize:14 }}>When you're done, return the car to the same location you picked it up from, then lock up with your Zipcard.</p>
+          <h4
+            style={{
+              textAlign: "center",
+              fontFamily: "Roboto",
+              fontWeight: "bold",
+              marginBottom: "0.5em"
+            }}
+          >
+            Drive
+          </h4>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <p
+            style={{
+              textAlign: "center",
+              fontFamily: "Quicksand",
+              fontSize: "1em",
+              color: "#8C8A88",
+              width: "80%"
+            }}
+          >
+            To unlock, tap your Zipcard to the card reader on the windshield.
+          </p>
+        </div>
 
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "1em",
+            backgroundColor: "white",
 
+            width: 290,
+            paddingBottom: "1em",
+            borderRadius: 10,
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <img src={map} style={{ width: "35%", margin: "2em 0" }} alt=""></img>
 
-        </div >
-    )
+          <h4
+            style={{
+              textAlign: "center",
+              fontFamily: "Roboto",
+              fontWeight: "bold",
+              marginBottom: "0.5em"
+            }}
+          >
+            Return
+          </h4>
+
+          <p
+            style={{
+              textAlign: "center",
+              fontFamily: "Quicksand",
+              fontSize: "1em",
+              color: "#8C8A88",
+              width: "80%"
+            }}
+          >
+            When you're done, return the car to the same location you picked it
+            up from.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /*
